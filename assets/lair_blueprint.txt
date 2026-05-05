@@ -1,0 +1,24 @@
+EVIL LAIR :: BLUEPRINT v3.2
+============================
+
+           [HELIPAD]
+              |
+   +----------+----------+
+   |                     |
+[LOBBY]              [SHARK TANK]
+   |                     |
+[MEETING ROOM] -- [BROOM CLOSET *]
+   |                     |
+[PANTRY]            [VOLCANO BAY]
+   |                     |
+[SECRET EXIT VIA DUMPSTER]
+
+* Hat Ceremonies held here. RSVP required.
+
+NOTES
+-----
+- Volcano Bay is currently leased; do not redecorate.
+- Shark tank glass is rated for 1 (one) intern's worth of impact only.
+- The dumpster exit smells. This is intentional. Camouflage.
+- The "secret" door behind the bookshelf is NOT secret anymore.
+  Everyone knows. Stop telling people.

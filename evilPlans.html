@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Top Secret :: Evil Plans HQ</title>
+<!-- API=deCTF{Un3_Souris_V3rt_QuI_Coura1t_DaNs_Lherbe} -->
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #0b0b1a;
+    color: #f4d35e;
+    font-family: "Courier New", monospace;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px dashed #f4d35e;
+    background: rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 10;
+  }
+  header h1 { margin: 0; letter-spacing: 4px; }
+  header p { margin: 6px 0 0; font-size: 12px; opacity: 0.8; }
+  .api-line {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    color: #7af7c1;
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 10;
+  }
+  main {
+    padding: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  main h2 { color: #f95738; }
+  main p, main li { line-height: 1.5; font-size: 14px; }
+  .stage {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .stage img {
+    position: absolute;
+    image-rendering: pixelated;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>EVIL PLANS :: HQ</h1>
+    <p>Internal Console &mdash; Authorized Cats Only</p>
+  </header>
+  <div class="api-line">
+    API=deCTF{Un3_Souris_V3rt_QuI_Coura1t_DaNs_Lherbe}
+  </div>
+  <main>
+    <h2>Welcome, Operative.</h2>
+    <p>The plan is in motion. Refer to <code>/plans</code> for phase briefings,
+       <code>/minions</code> for the recruitment pipeline, and
+       <code>/finances</code> for laundering pipelines.</p>
+    <p>Do <strong>not</strong> mention the project codename to anyone outside
+       the council. Especially not to the dolphin.</p>
+    <ul>
+      <li>Phase 1: Acquire 10,000 rubber ducks.</li>
+      <li>Phase 2: Replace world&rsquo;s coffee with decaf.</li>
+      <li>Phase 3: Profit.</li>
+    </ul>
+    <p>Status board updates every 7 minutes. If you see fish &mdash; ignore them.</p>
+  </main>
+
+  <div class="stage" id="stage" aria-hidden="true"></div>
+
+<script>
+  const FISH = "https://media1.tenor.com/m/4GC5ohD7ySEAAAAd/fish-spinning.gif";
+  const BOOM = "https://media.tenor.com/5acZjLl1OTAAAAAj/explosion-deltarune.gif";
+  const stage = document.getElementById("stage");
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function spawn() {
+    const size = rand(100, 320);
+    const x = rand(0, Math.max(0, window.innerWidth - size));
+    const y = rand(0, Math.max(0, window.innerHeight - size));
+
+    const img = document.createElement("img");
+    img.src = FISH;
+    img.style.left = x + "px";
+    img.style.top = y + "px";
+    img.style.width = size + "px";
+    img.style.height = size + "px";
+    stage.appendChild(img);
+
+    setTimeout(() => {
+      img.src = BOOM;
+      setTimeout(() => {
+        img.remove();
+        spawn();
+      }, 1200);
+    }, 2000);
+  }
+
+  spawn();
+</script>
+</body>
+</html>
