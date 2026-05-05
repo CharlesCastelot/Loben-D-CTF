@@ -1,6 +1,6 @@
 # Phase 1 :: Operation Quack Storm
 
-**Objective:** Acquire 10,000 rubber ducks before the next full moon.
+**Objective:** Acquire 10,001 rubber ducks before the next full moon.
 
 ## Steps
 
